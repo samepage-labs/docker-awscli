@@ -1,8 +1,5 @@
 FROM alpine
 
-#ENV AWSCLI_VERSION "1.10.38"
-#ENV PACKAGES "groff less python py-pip"
-
 RUN apk add --update groff less python py-pip \
     && pip install awscli \
     && apk --purge -v del py-pip \
